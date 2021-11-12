@@ -45,6 +45,8 @@ const BranchNode: React.FC<IProps> = (props) => {
       onAddCondition(node, registerNode.conditionNodeType);
   };
 
+  const AddConditionButton = registerNode?.addConditionButton;
+
   return (
     <div className="flow-builder-node flow-builder-branch-node">
       <div className="flow-builder-node__content">
@@ -64,10 +66,8 @@ const BranchNode: React.FC<IProps> = (props) => {
         ) : null}
 
         {!readonly && !disabled ? (
-          !!registerNode?.addConditionButton ? (
-            registerNode?.addConditionButton({
-              addCondition: handleAddCondition,
-            })
+          !!AddConditionButton ? (
+            <AddConditionButton addCondition={handleAddCondition} />
           ) : (
             <div
               className="flow-builder-branch-node__add-button"
