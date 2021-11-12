@@ -64,12 +64,18 @@ const BranchNode: React.FC<IProps> = (props) => {
         ) : null}
 
         {!readonly && !disabled ? (
-          <div
-            className="flow-builder-branch-node__add-button"
-            onClick={handleAddCondition}
-          >
-            <ActionButton size={20} icon={AddConditionIcon} />
-          </div>
+          !!registerNode?.addConditionButton ? (
+            registerNode?.addConditionButton({
+              addCondition: handleAddCondition,
+            })
+          ) : (
+            <div
+              className="flow-builder-branch-node__add-button"
+              onClick={handleAddCondition}
+            >
+              <ActionButton size={20} icon={AddConditionIcon} />
+            </div>
+          )
         ) : (
           <SplitLine
             color={lineColor}
