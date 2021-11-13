@@ -8,10 +8,6 @@ export interface IDisplayComponent {
   remove?: (nodes?: INode | INode[]) => void;
 }
 
-export interface IAddConditionComponent {
-  addCondition: (e: React.MouseEvent) => void;
-}
-
 export interface IConfigComponent {
   node: INode;
   nodes: INode[];
