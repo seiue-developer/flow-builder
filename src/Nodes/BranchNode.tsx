@@ -68,8 +68,8 @@ const BranchNode: React.FC<IProps> = (props) => {
             className="flow-builder-branch-node__add-button"
             onClick={handleAddCondition}
           >
-            {!!registerNode?.displayComponent ? (
-              registerNode.displayComponent
+            {!!registerNode?.addConditionButton ? (
+              registerNode.addConditionButton
             ) : (
               <ActionButton size={20} icon={AddConditionIcon} />
             )}
