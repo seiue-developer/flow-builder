@@ -42,7 +42,6 @@ export interface IRegisterNode {
   conditionMaxNum?: number;
   addIcon?: React.ReactNode;
   actionButton?: React.ReactNode;
-  addConditionButton?: React.FC<IAddConditionComponent>;
   displayComponent?: React.FC<IDisplayComponent>;
   configComponent?: React.FC<IConfigComponent>;
   removeConfirmTitle?: string;
