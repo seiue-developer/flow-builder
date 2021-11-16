@@ -82,11 +82,7 @@ const AddNodeButton: React.FC<IProps> = (props) => {
       getPopupContainer={(triggerNode) => triggerNode as HTMLElement}
     >
       <div onClick={(e) => e.stopPropagation()}>
-        {!!registerNode?.actionButton ? (
-          registerNode?.actionButton
-        ) : (
-          <ActionButton icon={AddIcon} />
-        )}
+        {registerNode?.addComponent || <ActionButton icon={AddIcon} />}
       </div>
     </Popover>
   ) : null;
