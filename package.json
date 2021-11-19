@@ -1,6 +1,6 @@
 {
-  "name": "react-flow-builder",
-  "version": "0.1.21",
+  "name": "@seiue/react-flow-builder",
+  "version": "0.1.28",
   "keywords": [
     "flow",
     "builder",

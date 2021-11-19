@@ -8,6 +8,10 @@ export interface IDisplayComponent {
   remove?: (nodes?: INode | INode[]) => void;
 }
 
+export interface IAddConditionComponent {
+  addCondition: (e: React.MouseEvent) => void;
+}
+
 export interface IConfigComponent {
   node: INode;
   nodes: INode[];
@@ -37,6 +41,8 @@ export interface IRegisterNode {
   conditionMinNum?: number;
   conditionMaxNum?: number;
   addIcon?: React.ReactNode;
+  addComponent?: React.ReactNode;
+  addConditionComponent?: React.ReactNode;
   displayComponent?: React.FC<IDisplayComponent>;
   configComponent?: React.FC<IConfigComponent>;
   removeConfirmTitle?: string;
