@@ -9,7 +9,8 @@ export interface IDisplayComponent {
 }
 
 export interface IAddConditionComponent {
-  addCondition: (e: React.MouseEvent) => void;
+  node: INode;
+  add: (node: INode, newNodeType: string) => void;
 }
 
 export interface IConfigComponent {
@@ -42,7 +43,7 @@ export interface IRegisterNode {
   conditionMaxNum?: number;
   addIcon?: React.ReactNode;
   addComponent?: React.ReactNode;
-  addConditionComponent?: React.ReactNode;
+  AddConditionComponent?: React.FC<IAddConditionComponent>;
   displayComponent?: React.FC<IDisplayComponent>;
   configComponent?: React.FC<IConfigComponent>;
   removeConfirmTitle?: string;
